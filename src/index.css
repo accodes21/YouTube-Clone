@@ -26,8 +26,8 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
-  color: white !important;
+  background-color: #FC1503;
+  color: white;
 }
 
 .category-btn:hover span{
@@ -35,8 +35,8 @@ a {
 }
 
 .react-player {
-  height: 77vh !important;
-  width: 100% !important;
+  height: 77vh;
+  width: 100%;
 }
 
 .search-bar{
@@ -46,7 +46,7 @@ a {
 }
 
 .category-btn{
-  font-weight: bold !important;
+  font-weight: bold;
   text-transform: capitalize;
   display: flex;
   align-items: center;
@@ -70,17 +70,17 @@ a {
 
 @media screen and (max-width:800px){
   .copyright{
-    display:none !important;
+    display:none;
   }
 }
 
 @media screen and (max-width: 600px) {
   .scroll-horizontal {
-    overflow: auto !important;
+    overflow: auto;
   }
 
   .react-player {
-    height: 45vh !important;
+    height: 45vh;
   }
   .search-bar{
     width:200px;
