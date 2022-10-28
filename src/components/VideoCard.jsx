@@ -6,14 +6,27 @@ import { demoVideoUrl, demoThumbnailUrl, demoChannelTitle, demoVideoTitle, demoC
 const VideoCard = ({video:{id :{videoId}, snippet }}) =>{
     // console.log(snippet);
     return(
-        <Card>
+        <Card sx={{width: {md:"350px", xs:"100%"}, borderRadius:0}}>
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
                 <CardMedia 
                 component="img"
                 image={snippet?.thumbnails?.high?.url}
                 alt={snippet?.title}
-                sx={{height:180, width:358, objectFit:"cover"}}/>
+                sx={{height:190, width:360, objectFit:"cover"}}/>
             </Link>
+            <CardContent sx={{backgroundColor : "#1e1e1e", height:"100px"}}>
+            <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+                <Typography variant="subtitle1" color="white" fontWeight="bold">
+                    {snippet?.title.slice(0,60) || demoVideoTitle.slice(0,60)}
+                </Typography>
+            </Link>
+            <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}>
+                <Typography variant="subtitle2" color="gray" fontWeight="bold">
+                    {snippet?.channelTitle || demoChannelTitle}
+                    <CheckCircle sx={{fontSize: 12, ml:"5px"}}/>
+                </Typography>
+            </Link>
+            </CardContent>
         </Card>
     )
 }
