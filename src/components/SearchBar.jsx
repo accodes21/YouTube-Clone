@@ -23,7 +23,8 @@ const SearchBar = () => {
             borderRadius:20,
             border:"2px solid #e3e3e3",
             pl:3,
-
+            display:"flex",
+            fontSize:{xs:"12px"}
         }} 
         >
             <input type="text" 
